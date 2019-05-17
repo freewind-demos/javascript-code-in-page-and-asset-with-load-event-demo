@@ -1,5 +1,22 @@
 <html>
 <head>
+    <script>
+      console.log('### head.script start');
+
+      document.addEventListener('readystatechange', function (value) {
+        console.log('readystatechange:', document.readyState, value)
+      });
+
+      document.addEventListener('DOMContentLoaded', function (event) {
+        console.log('DOMContentLoaded:', event)
+      });
+
+      window.addEventListener('load', function (event) {
+        console.log('load', event);
+      });
+
+      console.log('### head.script end');
+    </script>
 </head>
 <body>
 <div id="main"></div>
